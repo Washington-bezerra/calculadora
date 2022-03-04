@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="src/style/style.css" rel="stylesheet">
+
+    <script src="src/JS/clear and backspace.js"></script>
+    <script src="src/JS/numbers.js"></script>
+    <script src="src/JS/operators.js"></script>
+
+    <title>SimpleCalc - Home</title>
+    <meta name="description" content="SimpleCalc - Uma calculadora simples para o dia a dia, 
+    contendo os operadores basicos da matemática.">
+</head>
+
+<body>
+    <div id="container">
+        <div class="calculate">
+
+            <input class="calculator-display" id="display" value="0">
+            
+            <br>
+            <br>
+
+            <session class="calculate-buttons">
+                <button class="button doble-width green" onclick="clearDisplay();">
+                    C
+                </button>
+
+                <button class="button green" onclick="backspace()">
+                    &larr;
+                </button>
+
+                <button class="button green" onclick="division()">
+                    &divide;
+                </button>
+
+                <button class="button" onclick="addNumberToDisplay('7')">
+                    7
+                </button>
+
+                <button class="button" onclick="addNumberToDisplay('8')">
+                    8
+                </button>
+                <button class="button" onclick="addNumberToDisplay('9')">
+                    9
+                </button>
+
+                <button class="button green" onclick="times();">
+                    x
+                </button>
+
+                <button class="button" onclick="addNumberToDisplay('4')">
+                    4
+                </button>
+
+                <button class="button" onclick="addNumberToDisplay('5')">
+                    5
+                </button>
+
+                <button class="button" onclick="addNumberToDisplay('6')">
+                    6
+                </button>
+
+                <button class="button green" onclick="minus()">
+                    -
+                </button>
+
+                <button class="button" onclick="addNumberToDisplay('1')">
+                    1
+                </button>
+
+                <button class="button" onclick="addNumberToDisplay('2')">
+                    2
+                </button>
+
+                <button class="button"  onclick="addNumberToDisplay('3')">
+                    3
+                </button>
+
+                <button class="button green" onclick="plus()">
+                    +
+                </button>
+
+                <button class="button doble-width" onclick="addNumberToDisplay('0')">
+                    0
+                </button>
+
+                <button class="button" onclick="addNumberToDisplay('.')">
+                    .
+                </button>
+
+                <button class="button green" onclick="sum()">
+                    =
+                </button>
+            </session>
+        </div>
+    </div>
+</body>
+
+</html>
