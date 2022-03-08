@@ -5,33 +5,58 @@ var isOtherNuber = false;
 function result(){
     let display = document.getElementById('display');
     let operator = array[1];
+    let resultToDisplay = 0;
 
     switch (operator) {
         
         case '+':
-            var resultToDisplay = array[0] + array[2];
-            display.setAttribute('value', resultToDisplay)
-            array = [];
-            return resultToDisplay;
+            resultToDisplay = array[0] + array[2];
+            break;
 
         case '-':
-            var resultToDisplay = array[0] - array[2];
-            display.setAttribute('value', resultToDisplay)
-            array = [];
+            resultToDisplay = array[0] - array[2];
             break;
         
         case '*':
-            var resultToDisplay = array[0] * array[2];
-            display.setAttribute('value', resultToDisplay)
-            array = [];
+            resultToDisplay = array[0] * array[2];
             break;
         
         case '/':
-            var resultToDisplay = array[0] / array[2];
-            display.setAttribute('value', resultToDisplay)
-            array = [];
+            resultToDisplay = array[0] / array[2];
             break;
     }
+
+    display.setAttribute('value', resultToDisplay)
+    if(array.length == 4){
+        ultimoOperador = array[array.length-1]
+        array = []
+        array.push(resultToDisplay, ultimoOperador)
+        isOtherNuber = true
+
+    }else{
+        array = [];
+        array.push(resultToDisplay)
+    }
+    //array.push(resultToDisplay);
+}
+
+function operator(operator){
+
+    let display = document.getElementById('display');
+    let num1 = Number(display.value);
+
+    if(array.length == 1){
+        array.push(operator);
+    }else{
+        array.push(num1);
+        array.push(operator);
+    }
+
+    isOtherNuber = true
+
+    if(array.length >= 3){
+        result();
+    } 
 }
 
 function sum(){
@@ -43,55 +68,55 @@ function sum(){
     result();
 }
 
-function plus(){
-    let display = document.getElementById('display');
-    let num1 = Number(display.value);
+// function plus(){
+//     let display = document.getElementById('display');
+//     let num1 = Number(display.value);
 
-    array.push(num1);
-    array.push('+');
-    isOtherNuber = true
+//     array.push(num1);
+//     array.push('+');
+//     isOtherNuber = true
 
-    if(array.length >= 3){
-        result();
-    }
+//     if(array.length >= 3){
+//         result();
+//     }
     
-}
+// }
 
-function minus(){
-    let display = document.getElementById('display');
-    let num1 = Number(display.value);
+// function minus(){
+//     let display = document.getElementById('display');
+//     let num1 = Number(display.value);
 
-    array.push(num1);
-    array.push('-');
-    isOtherNuber = true
+//     array.push(num1);
+//     array.push('-');
+//     isOtherNuber = true
 
-    if(array.length >= 3){
-        result();
-    }
-}
+//     if(array.length >= 3){
+//         result();
+//     }
+// }
 
-function times(){
-    let display = document.getElementById('display');
-    let num1 = Number(display.value);
+// function times(){
+//     let display = document.getElementById('display');
+//     let num1 = Number(display.value);
 
-    array.push(num1);
-    array.push('*');
-    isOtherNuber = true
+//     array.push(num1);
+//     array.push('*');
+//     isOtherNuber = true
 
-    if(array.length >= 3){
-        result();
-    }
-}
+//     if(array.length >= 3){
+//         result();
+//     }
+// }
 
-function division(){
-    let display = document.getElementById('display');
-    let num1 = Number(display.value);
+// function division(){
+//     let display = document.getElementById('display');
+//     let num1 = Number(display.value);
 
-    array.push(num1);
-    array.push('/');
-    isOtherNuber = true
+//     array.push(num1);
+//     array.push('/');
+//     isOtherNuber = true
 
-    if(array.length >= 3){
-        result();
-    }
-}
+//     if(array.length >= 3){
+//         result();
+//     }
+// }

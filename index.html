@@ -10,6 +10,7 @@
     <script src="src/JS/clear and backspace.js"></script>
     <script src="src/JS/numbers.js"></script>
     <script src="src/JS/operators.js"></script>
+    <!-- <script src="src/JS/capturaTecla.js"></script> -->
 
     <title>SimpleCalc - Home</title>
     <meta name="description" content="SimpleCalc - Uma calculadora simples para o dia a dia, 
@@ -17,6 +18,8 @@
 </head>
 
 <body>
+    <script src="src/JS/capturaTecla.js"></script>
+
     <div id="container">
         <div class="calculate">
 
@@ -34,7 +37,7 @@
                     &larr;
                 </button>
 
-                <button class="button green" onclick="division()">
+                <button class="button green" onclick="operator('/')">
                     &divide;
                 </button>
 
@@ -49,7 +52,7 @@
                     9
                 </button>
 
-                <button class="button green" onclick="times();">
+                <button class="button green" onclick="operator('*');">
                     x
                 </button>
 
@@ -65,7 +68,7 @@
                     6
                 </button>
 
-                <button class="button green" onclick="minus()">
+                <button class="button green" onclick="operator('-')">
                     -
                 </button>
 
@@ -81,7 +84,7 @@
                     3
                 </button>
 
-                <button class="button green" onclick="plus()">
+                <button class="button green" onclick="operator('+')">
                     +
                 </button>
 
