@@ -22,9 +22,24 @@ function result(){
             break;
         
         case '/':
+            if (array[2] == 0){
+                alert('Não é possivel dividir um numero por 0');
+                array = []
+                return
+            }
             resultToDisplay = array[0] / array[2];
             break;
     }
+    let bigger = 0
+    let lengthNum1 = array[0].toString().length
+    let lengthNum2 = array[2].toString().length
+
+    if (lengthNum1 > lengthNum2){bigger = lengthNum1}
+    else{bigger = lengthNum2}
+
+    if (resultToDisplay.toString().length > (bigger +1 ))
+        
+        resultToDisplay =resultToDisplay.toString().slice(0, (bigger +1 ))
 
     display.setAttribute('value', resultToDisplay)
     if(array.length == 4){
@@ -37,7 +52,7 @@ function result(){
         array = [];
         array.push(resultToDisplay)
     }
-    //array.push(resultToDisplay);
+
 }
 
 function operator(operator){
@@ -67,56 +82,3 @@ function sum(){
 
     result();
 }
-
-// function plus(){
-//     let display = document.getElementById('display');
-//     let num1 = Number(display.value);
-
-//     array.push(num1);
-//     array.push('+');
-//     isOtherNuber = true
-
-//     if(array.length >= 3){
-//         result();
-//     }
-    
-// }
-
-// function minus(){
-//     let display = document.getElementById('display');
-//     let num1 = Number(display.value);
-
-//     array.push(num1);
-//     array.push('-');
-//     isOtherNuber = true
-
-//     if(array.length >= 3){
-//         result();
-//     }
-// }
-
-// function times(){
-//     let display = document.getElementById('display');
-//     let num1 = Number(display.value);
-
-//     array.push(num1);
-//     array.push('*');
-//     isOtherNuber = true
-
-//     if(array.length >= 3){
-//         result();
-//     }
-// }
-
-// function division(){
-//     let display = document.getElementById('display');
-//     let num1 = Number(display.value);
-
-//     array.push(num1);
-//     array.push('/');
-//     isOtherNuber = true
-
-//     if(array.length >= 3){
-//         result();
-//     }
-// }
