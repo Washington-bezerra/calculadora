@@ -23,7 +23,7 @@
     <div id="container">
         <div class="calculate">
 
-            <input class="calculator-display" id="display" value="0">
+            <input type="number" class="calculator-display" id="display" value="0" disabled>
             
             <br>
             <br>
@@ -37,7 +37,7 @@
                     &larr;
                 </button>
 
-                <button class="button green" onclick="operator('/')">
+                <button class="button green" id="/" onclick="operator('/')">
                     &divide;
                 </button>
 
@@ -52,7 +52,7 @@
                     9
                 </button>
 
-                <button class="button green" onclick="operator('*');">
+                <button class="button green" id="*" onclick="operator('*');">
                     x
                 </button>
 
@@ -68,7 +68,7 @@
                     6
                 </button>
 
-                <button class="button green" onclick="operator('-')">
+                <button class="button green" id="-" onclick="operator('-')">
                     -
                 </button>
 
@@ -84,7 +84,7 @@
                     3
                 </button>
 
-                <button class="button green" onclick="operator('+')">
+                <button class="button green" id="+" onclick="operator('+')">
                     +
                 </button>
 
