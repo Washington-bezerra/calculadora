@@ -60,7 +60,7 @@ function operator(operator){
     let display = document.getElementById('display');
     let num1 = Number(display.value);
 
-    if ((typeof(array[array.length-1]) == 'string')){
+    if ( isOtherNuber && (typeof(array[array.length-1]) == 'string')){
         array[array.length-1] = operator
         return
     }
