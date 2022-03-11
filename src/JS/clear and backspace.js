@@ -13,4 +13,5 @@ function clearDisplay () {
     array=[];
     let display = document.getElementById('display');
     display.setAttribute('value', 0);
+    changeColorOfButtonPressed(null);
 }

@@ -66,6 +66,7 @@ function operator(operator){
 
     if ( isOtherNuber && (typeof(array[array.length-1]) == 'string')){
         array[array.length-1] = operator
+        changeColorOfButtonPressed(operator)
         return
     }
 
@@ -77,7 +78,7 @@ function operator(operator){
     }
 
     isOtherNuber = true
-
+    changeColorOfButtonPressed(operator)
     if(array.length >= 3){
         result();
     } 
@@ -88,6 +89,6 @@ function sum(){
     let num1 = Number(display.value);
 
     array.push(num1)
-
+    changeColorOfButtonPressed(null);
     result();
 }
