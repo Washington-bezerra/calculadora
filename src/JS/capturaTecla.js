@@ -1,6 +1,5 @@
 function tecla(){
 
-  console.log(event.keyCode)
       //0
   if(event.keyCode == 48 || event.keyCode == 96){
       addNumberToDisplay('0')
