@@ -4,32 +4,36 @@ var isOtherNuber = false;
 
 function result(){
     let display = document.getElementById('display');
+    let num1 = array[0]
     let operator = array[1];
+    let num2 = array[2]
     let resultToDisplay = 0;
 
     switch (operator) {
         
         case '+':
-            resultToDisplay = array[0] + array[2];
+            resultToDisplay = num1 + num2;
             break;
 
         case '-':
-            resultToDisplay = array[0] - array[2];
+            resultToDisplay = num1 - num2;
             break;
         
         case '*':
-            resultToDisplay = array[0] * array[2];
+            resultToDisplay = num1 * num2;
             break;
         
         case '/':
-            if (array[2] == 0){
+            
+            if (num2 == 0){
                 alert('Não é possivel dividir um numero por 0');
                 array = []
                 return
             }
-            resultToDisplay = array[0] / array[2];
+            resultToDisplay = num1 / num2;
             break;
     }
+
     let bigger = 0
     let lengthNum1 = array[0].toString().length
     let lengthNum2 = array[2].toString().length
