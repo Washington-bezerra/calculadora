@@ -10,6 +10,7 @@
     <script src="src/JS/clear and backspace.js"></script>
     <script src="src/JS/numbers.js"></script>
     <script src="src/JS/operators.js"></script>
+    <script src="src/JS/styleButton.js"></script>
 
     <title>SimpleCalc</title>
     <meta name="description" content="SimpleCalc - Uma calculadora simples para o dia a dia, 
@@ -22,12 +23,12 @@
     <div id="container">
         <div class="calculate">
 
-            <input type="number" class="calculator-display" id="display" value="0" disabled>
+            <input class="calculator-display" id="display" value="0" disabled>
             
             <br>
             <br>
 
-            <session class="calculate-buttons">
+            <session class="calculate-buttons" id="buttons">
                 <button class="button doble-width green" onclick="clearDisplay();">
                     C
                 </button>
@@ -35,8 +36,8 @@
                 <button class="button green" onclick="backspace()">
                     &larr;
                 </button>
-
-                <button class="button green" id="/" name="operator" onclick="operator('/')">
+              
+                <button class="button green" name="/" onclick="operator('/')">
                     &divide;
                 </button>
 
@@ -51,7 +52,7 @@
                     9
                 </button>
 
-                <button class="button green" id="*" name="operator" onclick="operator('*');">
+                <button class="button green" name="*" onclick="operator('*');">
                     x
                 </button>
 
@@ -67,7 +68,7 @@
                     6
                 </button>
 
-                <button class="button green" id="-" name="operator" onclick="operator('-')">
+                <button class="button green" name="-" onclick="operator('-')">
                     -
                 </button>
 
@@ -83,7 +84,7 @@
                     3
                 </button>
 
-                <button class="button green" id="+" name="operator" onclick="operator('+')">
+                <button class="button green" name="+" onclick="operator('+')">
                     +
                 </button>
 
