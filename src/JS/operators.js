@@ -92,6 +92,12 @@ function result(){
 
 function operator(operator){
 
+    //Troca de operador
+    if(isOtherNuber){
+        array[array.length-1] = operator
+        return
+    }
+
     let display = document.getElementById('display');
     let num1 = Number(display.value);
 

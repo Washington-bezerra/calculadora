@@ -1,5 +1,4 @@
 function tecla(){
-
       //0
   if(event.keyCode == 48 || event.keyCode == 96){
       addNumberToDisplay('0')
@@ -60,9 +59,9 @@ function tecla(){
 document.body.onkeypress = tecla;
 
 //Captura Backspace
-document.querySelector('body').addEventListener('keydown', function(teste) {
+document.querySelector('body').addEventListener('keydown', function(key) {
  
-    if (teste.keyCode == 8){
+    if (key.keyCode == 8){
         backspace()
     }
 
