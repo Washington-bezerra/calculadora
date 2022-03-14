@@ -62,6 +62,7 @@ function result(){
         if (decimalPlaceCounter(resultToDisplay.toString()) >= 3){
             resultToDisplay = resultToDisplay.toFixed(3);
         }
+        //Ex: 0,1+0,2=0,300...4, após isso o retorno será 0,3 apenas
     }else if(num1.toString().includes('.') || num2.toString().includes('.')){
             
         let lengthNum1 = array[0].toString().length
