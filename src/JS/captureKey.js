@@ -1,4 +1,4 @@
-function tecla(){
+function key(){
       //0
   if(event.keyCode == 48 || event.keyCode == 96){
       addNumberToDisplay('0')
@@ -29,7 +29,7 @@ function tecla(){
       //9
   }else if(event.keyCode == 57 || event.keyCode == 105){
       addNumberToDisplay('9')
-      //, ou .
+      //, or .
   }else if(event.keyCode == 44 || event.keyCode == 46){
       addNumberToDisplay('.') 
   }  //backspace
@@ -38,27 +38,27 @@ function tecla(){
       //delete
   }else if (event.keyCode == 127){
       clearDisplay()
-      //soma
+      //sum
   }else if (event.keyCode == 13 || event.keyCode == 61){
       sum()
-      //mais
+      //plus
   }else if (event.keyCode == 43){
       operator('+')
-      //menos
+      //minus
   }else if (event.keyCode == 45){
       operator('-')
-      //dividir
+      //division
   }else if (event.keyCode == 47){
       operator('/')
-      //multi
+      //times
   }else if (event.keyCode == 42){
       operator('*')
   }
 }
 
-document.body.onkeypress = tecla;
+document.body.onkeypress = key;
 
-//Captura Backspace
+//capture Backspace
 document.querySelector('body').addEventListener('keydown', function(key) {
  
     if (key.keyCode == 8){
