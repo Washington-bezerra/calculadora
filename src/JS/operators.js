@@ -57,6 +57,8 @@ function result(){
     resultToDisplay = Number(resultToDisplay)
 
     display.setAttribute('value', resultToDisplay)
+    isOtherNuber = true
+    
     if(array.length == 4){
         ultimoOperador = array[array.length-1]
         array = []
@@ -65,7 +67,8 @@ function result(){
 
     }else{
         array = [];
-        array.push(resultToDisplay)
+        array.push(resultToDisplay, operator)
+        changeColorOfButtonPressed(operator)
     }
 
 }
@@ -75,6 +78,7 @@ function operator(operator){
     //Troca de operador
     if(isOtherNuber){
         array[array.length-1] = operator
+        changeColorOfButtonPressed(operator)
         return
     }
 
@@ -107,7 +111,13 @@ function sum(){
 
     array.push(num1)
     changeColorOfButtonPressed(null);
-    result();
+
+    if (array.length >= 3){
+        result();
+    }else{
+        alert('Operação incompleta');
+        return
+    }
 }
 
 function decimalPlaceCounter(string){
