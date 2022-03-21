@@ -109,14 +109,15 @@ function sum(){
     let display = document.getElementById('display');
     let num1 = Number(display.value);
 
-    array.push(num1)
-    changeColorOfButtonPressed(null);
-
-    if (array.length >= 3){
-        result();
+    if (array.length == 0 || typeof(array[array.length-1]) == 'string'){
+        array.push(num1)
+        changeColorOfButtonPressed(null);
     }else{
         alert('Operação incompleta');
         return
+    }
+    if (array.length >= 3){
+        result();
     }
 }
 
