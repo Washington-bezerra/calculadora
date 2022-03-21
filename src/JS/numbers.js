@@ -14,8 +14,11 @@ function addNumberToDisplay(number){
 
     if(display.value == '0' && number != "."){
         display.setAttribute('value', number);
+    }
+    else if((display.value == '0' || display.value == '') && number == "."){
+        display.setAttribute('value', (0 + number))
+
     }else{
         display.setAttribute('value', (display.value + number))
-
     }
 }
